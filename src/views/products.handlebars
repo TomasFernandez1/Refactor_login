@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Paginate</title>
+</head>
+<body>
+    <h1>Products</h1>
+    {{#each products}}
+    <div>
+        <h2><strong>Product:</strong>{{this.title}}</h2>
+        <p><strong>Description:</strong> {{this.description}}</p>
+        <p><strong>Price: $</strong> {{this.price}}</p>
+        <p><strong>Stock:</strong> {{this.stock}}</p>
+        <p><strong>Category:</strong> {{this.category}}</p>
+        <button class="addToCartBtn" data-product-id="{{this._id}}">Añadir al carrito</button>
+    </div>
+
+    {{/each}}
+    {{#if hasPrevPage}}
+    <a href="/api/products?pageQuery={{prevPage}}">Previous</a>
+    {{/if}}
+    <strong>{{page}}</strong>
+    {{#if hasNextPage}}
+    <a href="/api/products?pageQuery={{nextPage}}">Next</a>
+    {{/if}}
+    <a href="/api/products?sort=asc">Precio ascendente</a>
+    <a href="/api/products?sort=desc">Precio descendente</a>
+    <a href="/api/products">Normal</a>
+</body>
+<script src="/js/products.js"></script>
+</html>

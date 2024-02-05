@@ -1,0 +1,27 @@
+<div>
+  <h1>Products</h1>
+  <!-- Go through the list of products and create a card for each of these -->
+  <div>
+    {{#each listadeproductos}}
+      <div>
+        <div>
+          <div class="card-body">
+            <h5>{{this.title}}</h5>
+            <ul>
+              <li> Description: {{this.description}}</li>
+              <li> Price: ${{this.price}}</li>
+              <li> Category: {{this.category}}</li>
+              <li> Status: {{this.status}}</li>
+              <li> Stock: {{this.stock}}</li>
+              <li>
+                Image:
+                <img src="{{this.thumbnail}}" alt="{{this.title}}" />
+                <li> Code: <strong>{{this.code}}</strong></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

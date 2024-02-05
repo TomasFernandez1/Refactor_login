@@ -1,0 +1,137 @@
+<form id="formProduct">
+  <h2>Real Time Products</h2>
+  <div>
+    <label for="title" class="form-label">Product title</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Example: Smartphone"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="description" class="form-label">Description</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="text"
+        name="description"
+        id="description"
+        placeholder="Example: Best smartphone"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="stock" class="form-label">Stock</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="number"
+        name="stock"
+        id="stock"
+        placeholder="Example: 100"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="thumbnail" class="form-label">Image (URL)</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="text"
+        name="thumbnail"
+        id="thumbnail"
+        placeholder="Example: https://example.com/image.jpg"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="category" class="form-label">Category</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="text"
+        name="category"
+        id="category"
+        placeholder="Example Electronic "
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="price" class="form-label">Price</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="number"
+        name="price"
+        id="price"
+        placeholder="Example: 499.99"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <div class="form-check">
+      <input
+        name="status"
+        class="form-check-input"
+        type="checkbox"
+        value="true"
+        id="flexCheckChecked"
+        checked
+      />
+      <label class="form-check-label" for="flexCheckChecked">Status</label>
+    </div>
+  </div>
+
+  <div>
+    <label for="code" class="form-label">Code</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        type="text"
+        name="code"
+        id="code"
+        placeholder="Example: ABC123"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" id="add-btn">Submit</button>
+  </div>
+  <!--
+    <h2>Delete Product by ID:</h2>
+     
+    <div>
+        <label for="id-prod" class="form-label">Product ID</label>
+        <div class="input-group">
+            <input class="form-control" type="number" name="id-prod" id="id-prod" placeholder="Example:123">
+        </div>
+    </div>
+    <div>
+        <button type="button" id="delete-btn">Delete</button>
+    </div>
+    -->
+</form>
+
+<div id="list-products">
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+<body>
+    <ul id="messages">
+        {{#each messages}}
+            <li>{{user}} ({{correoDelUsuario}}): {{message}}</li>
+        {{/each}}
+    </ul>
+    <form id="form" action="POST">
+        <label for="username">Nombre:</label>
+        <input type="text" id="username" autocomplete="off" required>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" autocomplete="off" required>
+
+        <input id="m" autocomplete="off" />
+        <button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
